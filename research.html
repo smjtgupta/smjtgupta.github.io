@@ -93,12 +93,12 @@
             </div>
             <div class="col-8 col-12-medium imp-medium">
                 <section id="content">
-                  <h3>Multi Task Learning and Distributional relationship</h3>
-                  <p>Multi Task Learning (MTL) adresses the situation when a single data instance is associated with multiple labels and loss functions. 
-                     MTL learns shared respresentations that are common across all the tasks, while learning task-specific representations in their own branches.
-                     Our work explores various untouched aspects of MTL, including i) cases where partial labels are present, ii) comparision with Multi Objective
-                     Optimization, and iii) how MTL maps the input data distribution to the output label distribution, specifically when the overall distribution is
-                     a mixture of several underlying distributions.
+                  <h3>Multi Task Learning and and Group-targeted Labels</h3>
+                  <p>Multi Task Learning (MTL) paradigm is applicable a single data instance is associated with multiple labels or losses. 
+                     MTL learns shared respresentations that are common across all tasks, while learning task-specific representations in individual branches.
+                     Our work explores untouched aspects of MTL, including i) cases where partial (sparse) labels are present, ii) designing scalable
+                     neural architectural frameworks and iii) training and evaluation of such networks under soft labels and iv) how MTL maps the input data 
+                     to the output labels, specifically when the overall distribution is a mixture of several underlying distributions.
                   </p>
                 </section>
             </div>
@@ -108,19 +108,19 @@
             <div class="col-4 col-12-medium">
                 <section id="sidebar">
                   <section>
-                    <a class="image fit"><img src="images/hsi.jpg" alt="" /></a>
+                    <a class="image fit"><img src="images/fair.jpg" alt="" /></a>
                   </section>
                 </section>
             </div>
             <div class="col-8 col-12-medium imp-medium">
                 <section id="content">
-                  <h3>HyperSpectral Unmixing using Self-Correcting Autoencoder</h3>
-                  <p>Linear Mixture Model involves separating a mixed pixel as a linear combination of its endmembers and abundances. 
-                    Our work shows for the first time that a two-layer autoencoder (SCA-Net), with 2FK parameters (F features, K endmembers),
-                    achieves error metrics that are scales apart (1.E-5) from previously reported values around 1.E-2. SCA-Net converges 
-                    to this low error solution starting from a random initialization of weights. We also show that SCA-Net, 
-                    based upon a bi-orthogonal representation, performs a self-correction when the the number of endmembers 
-                    are over-specified. </p>
+                  <h3>Differentiable Fairness Loss function for Symmetric errors</h3>
+                  <p>Lack of differentiable fairness measures prevents gradient-based loss training or requires surrogate losses that diverge 
+                    from the true metric of interest. We introduce a differentiable fairness loss function that is mapped to balanced accuracy
+                    across groups, thereby avoiding metric divergence. It optimizes for symmetric errors across groups, where errors in mis-predicting 
+                    a group is equally as harmful as mis-predicting the other groups(s) -- a concept often overlooked in traditional fairness 
+                    applications. Our work enhances fairness across minority and marginalized groups through well-defined optimization.
+                  </p>
                 </section>
             </div>
           </div>
@@ -142,6 +142,27 @@
                     of functions and constraints. The first stage is a low-weight neural network to efficiently extract the 
                     weak Pareto front, using Fritz-John conditions, without assuming convexity. The second stage uses 
                     this weak front to approximate the strong Pareto optimal set through an effcient Pareto filter.</p>
+                </section>
+            </div>
+          </div>
+
+          <div class="row gtr-150">
+            <div class="col-4 col-12-medium">
+                <section id="sidebar">
+                  <section>
+                    <a class="image fit"><img src="images/hsi.jpg" alt="" /></a>
+                  </section>
+                </section>
+            </div>
+            <div class="col-8 col-12-medium imp-medium">
+                <section id="content">
+                  <h3>HyperSpectral Unmixing using Self-Correcting Autoencoder</h3>
+                  <p>Linear Mixture Model involves separating a mixed pixel as a linear combination of its endmembers and abundances. 
+                    Our work shows for the first time that a two-layer autoencoder (SCA-Net), with 2FK parameters (F features, K endmembers),
+                    achieves error metrics (1e-5) that are scales apart from previously reported values around of 1e-2. SCA-Net converges 
+                    to this low error solution starting from a random initialization of weights. We also show that SCA-Net, 
+                    based upon a bi-orthogonal representation, performs a self-correction when the the number of endmembers 
+                    are over-specified. </p>
                 </section>
             </div>
           </div>
