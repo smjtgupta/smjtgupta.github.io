@@ -17,11 +17,8 @@ export default function Home() {
       <ProjectsSection />
       <TapeSection />
       <PortfolioSection />
-      {/* <TestimonialsSection /> */}
       <ToolsSection />
-      {/* <ContactSection /> */}
       <Footer />
-      {/* <ProjectsPage /> */}
     </div>
   );
 }

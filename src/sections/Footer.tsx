@@ -1,4 +1,5 @@
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
+
 const footerLinks = [
   {
     title: "LinkedIn",
