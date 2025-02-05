@@ -31,7 +31,7 @@ import DockerIcon from "@/assets/icons/docker.svg";
 import GptIcon from "@/assets/icons/gpt.svg";
 import BertIcon from "@/assets/icons/google.svg";
 import LlamaIcon from "@/assets/icons/ollama.svg";
-import MistralIcon from "@/assets/icons/mistral.svg";
+import DeepseekIcon from "@/assets/icons/deepseek.svg";
 
 const languageItems = [
   { title: "Python", iconType: PythonIcon },
@@ -75,8 +75,8 @@ const frontItems = [
 const llmItems = [
   { title: "Bert", iconType: BertIcon },
   { title: "GPT", iconType: GptIcon },
-  { title: "Llama", iconType: LlamaIcon },
-  { title: "Mistral", iconType: MistralIcon },
+  { title: "Ollama", iconType: LlamaIcon },
+  { title: "Deepseek", iconType: DeepseekIcon },
 ];
 
 const otherItems = [

@@ -6,6 +6,7 @@ import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
 import { HeroOrbit } from "@/components/HeroOrbit";
+import Link from "next/link";
 
 export const HeroSection = () => {
   return (
@@ -115,19 +116,19 @@ export const HeroSection = () => {
             </h1>
             <p className="mt-4 text-center text-white/60 md:text-lg">
               I craft domain-guided neural models using advanced machine
-              learning and natural language technologies.
+              learning and natural language technologies. {""}
               <span className="hidden md:block"> </span>
               My work blends accuracy and interpretability to provide
               data-driven insights for impactful outcomes.
             </p>
           </div>
           <div className="flex flex-col justify-center items-center mt-4 gap-4">
-            <a href="mailto:smjtgupta@utexas.edu">
+            <Link href="/contact">
               <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
                 <ArrowRight className="size-4" />
                 <span className="font-semibold">Contact Me</span>
               </button>
-            </a>
+            </Link>
             <a href="#about" className="py-6">
               <button className="flex items-center justify-center border border-white/50 bg-white/10 size-16 rounded-full animate-bounce">
                 <ArrowDown className="size-8" />

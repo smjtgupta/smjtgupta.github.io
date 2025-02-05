@@ -1,40 +1,24 @@
 import { SectionHeader } from "@/components/SectionHeader";
-import { Card } from "@/components/Card";
+import { Timeline } from "@/sections/Timeline";
 
 export const PortfolioSection = () => {
   return (
-    <div className="py-20" id="portfolio">
+    <div className="py-20">
       <div className="container">
+        <div className="py-20 items-center tracking-wide mt-4 mx-4 lg:px-24 text-white/60 md:text-lg ">
+          <p>
+            I deliver practical and impactful solutions, bridging theory and
+            application, applying domain-specific knowledge to address key
+            challenges across various sectors with industry level coding and
+            pipeline standards.
+          </p>
+        </div>
         <SectionHeader
           eyebrow="My Portfolio"
-          title="Education"
+          title="Work and Education"
           description=""
         />
-        <div className="mt-10 flex flex-col gap-8">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            <Card className="md:col-span-1">
-              <div className="flex flex-col p-4 md:py-4 md:px-6">
-                <h3 className="font-serif text-xl">PhD - UT Austin</h3>
-                <h3 className="font-serif">Computer Science</h3>
-                <h3 className="font-serif">2018-2024</h3>
-              </div>
-            </Card>
-            <Card className="md:col-span-1">
-              <div className="flex flex-col p-4 md:py-4 md:px-6">
-                <h3 className="font-serif text-xl">MS - UT Austin</h3>
-                <h3 className="font-serif">Computer Science</h3>
-                <h3 className="font-serif">2014-2017</h3>
-              </div>
-            </Card>
-            <Card className="md:col-span-1">
-              <div className="flex flex-col p-4 md:py-4 md:px-6">
-                <h3 className="font-serif text-xl">MTech - IIT KGP</h3>
-                <h3 className="font-serif">Electronics Engg.</h3>
-                <h3 className="font-serif">2012-2014</h3>
-              </div>
-            </Card>
-          </div>
-        </div>
+        <Timeline />
       </div>
     </div>
   );

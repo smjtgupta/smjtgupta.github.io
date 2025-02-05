@@ -1,34 +1,77 @@
 import ArrowUPRightIcon from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
+import memojiImage from "@/assets/images/memoji-computer.png";
+import Image from "next/image";
+import ArrowRight from "@/assets/icons/arrow-up-right.svg";
 
 export const ContactSection = () => {
   return (
-    <div className="py-16 pt-12 lg:py-24 lg:pt-20" id="contact">
+    <div className="py-20 lg:py-40" id="contact">
       <div className="container">
-        <div className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 py-8 px-10 rounded-3xl text-center md:text-left relative overflow-hidden z-0">
-          <div
-            className="absolute inset-0 opacity-10 -z-10"
-            style={{
-              backgroundImage: `url(${grainImage.src})`,
-            }}
-          ></div>
-          <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
-            <div>
-              <h2 className="font-serif text-2xl md:text-3xl">
-                Let’s deliver exceptional solutions for your business!
-              </h2>
-              <p className="text-sm mt-2 md:text-base">
-                Ready to streamline your business or research projects and bring
-                them to life? Let's connect and discuss if I can help you
-                achieve your goals
-              </p>
-            </div>
-            <a href="mailto:smjtgupta@utexas.edu">
-              <button className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900">
-                <span className="font-semibold">Contact Me</span>
-                <ArrowUPRightIcon className="size-4" />
-              </button>
-            </a>
+        <div className="flex flex-col lg:flex-row items-center">
+          {/* Contact Form */}
+          {/* Image */}
+          <div className="p-8 flex items-center justify-center">
+            <Image
+              src={memojiImage} // Replace with your image path
+              alt="Contact me"
+              className="max-w-full h-auto rounded-lg shadow-md"
+            />
+          </div>
+          <div className="w-full md:w-3/4 lg:w-1/2">
+            <h2 className="font-serif text-3xl md:text-5xl text-center">
+              Get in Touch
+            </h2>
+            <form className="space-y-5 py-8">
+              <div>
+                <label htmlFor="name" className="font-semibold text-white/80">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your Name"
+                  className="w-full px-4 py-2 text-gray-900 font-serif border border-gray-300 rounded-md shadow-md"
+                />
+              </div>
+              <div>
+                <label htmlFor="email" className="font-semibold text-white/80">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Your Email"
+                  className="w-full px-4 py-2 text-gray-900 font-serif border border-gray-300 rounded-md shadow-md"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="message"
+                  className="font-semibold text-white/80"
+                >
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Your Message"
+                  rows={5} // Use curly braces to pass a number
+                  className="w-full px-4 py-2 text-gray-900 font-serif border border-gray-300 rounded-md shadow-md"
+                ></textarea>
+              </div>
+              <a href="mailto:smjtgupta@gmail.com">
+                <button
+                  type="submit"
+                  className="w-full mt-5 inline-flex items-center justify-center gap-2 border border-white bg-gray-100 text-gray-900 h-12 px-6 rounded-xl"
+                >
+                  <ArrowRight className="size-4" />
+                  <span className="font-semibold">Send</span>
+                </button>
+              </a>
+            </form>
           </div>
         </div>
       </div>
