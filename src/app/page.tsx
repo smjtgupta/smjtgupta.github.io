@@ -132,13 +132,13 @@ const HeroSection = () => {
           </div>
           <div className="flex flex-col justify-center items-center mt-4 gap-4">
             <Link href="/contact">
-              <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
+              <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl min-h-[48px]">
                 <ArrowRight className="size-4" />
                 <span className="font-semibold">Contact Me</span>
               </button>
             </Link>
-            <a href="#about" className="py-6">
-              <button className="flex items-center justify-center border border-white/50 bg-white/10 size-16 rounded-full animate-bounce">
+            <a href="#about" className="py-6 inline-flex items-center justify-center min-w-[48px] min-h-[48px]" aria-label="Scroll to about section">
+              <button className="flex items-center justify-center border border-white/50 bg-white/10 size-16 rounded-full animate-bounce" aria-hidden="true">
                 <ArrowDown className="size-8" />
               </button>
             </a>
@@ -310,7 +310,7 @@ const ProjectsSection = () => {
             description="Explore my journey of shaping ideas into practical and scalable outcomes"
           />
           <Link href="/projects">
-            <button className="mt-4 inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
+            <button className="mt-4 inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl min-h-[48px]">
               <ArrowUpRightIcon className="size-4" />
               <span className="font-semibold">View All Projects</span>
             </button>
@@ -336,7 +336,7 @@ const ProjectsSection = () => {
                       {project.title}
                     </h3>
                     <a href={project.link} target="_blank" rel="noopener noreferrer">
-                      <button className="bg-white text-gray-950 h-12 w-full px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
+                      <button className="bg-white text-gray-950 h-12 w-full px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 min-h-[48px]">
                         <span>View Related Publication</span>
                         <ArrowUpRightIcon className="size-4" />
                       </button>

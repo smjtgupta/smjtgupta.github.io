@@ -28,14 +28,15 @@ const Footer = () => {
               Designed with NextJS, React and Tailwind
             </p>
           </div>
-          <nav className="flex flex-col md:flex-row items-center gap-8 font-semibold text-white/70">
+          <nav className="flex flex-col md:flex-row items-center gap-8 font-semibold text-white/70" aria-label="Social links">
             {footerLinks.map((link) => (
               <a
                 href={link.links}
                 target="_blank"
                 rel="noopener noreferrer"
                 key={link.title}
-                className="inline-flex items-center gap-1.5"
+                className="inline-flex items-center gap-1.5 min-h-[44px] min-w-[44px] justify-center"
+                aria-label={`${link.title} (opens in new tab)`}
               >
                 <span className="font-semibold">{link.title}</span>
                 <ArrowUpRightIcon className="size-4" />

@@ -76,7 +76,10 @@ const PortfolioSection = () => {
     <div className="py-20">
       <div className="container">
         <div className="py-20 items-center text-center tracking-wide mt-4 text-white/60 md:text-lg max-w-5xl mx-auto">
-          <p>
+          <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
+            Portfolio
+          </h1>
+          <p className="mt-4">
             I deliver practical scalable solutions, bridging theory and
             application, applying domain-specific knowledge to address key
             challenges across sectors with industry level coding and pipeline

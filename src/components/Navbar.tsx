@@ -6,7 +6,7 @@ import { TechIcon } from "@/components/TechIcon";
 
 const Navbar = () => {
   return (
-    <nav className="fixed shadow-md w-full z-10 top-5">
+    <nav className="fixed shadow-md w-full z-10 top-5" aria-label="Main navigation">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-10">
           {/* Left Section - Logo */}
@@ -30,25 +30,25 @@ const Navbar = () => {
             <div className="flex items-center px-2 py-2 border border-white/15 rounded-full bg-white/10 backdrop-blur">
               <Link
                 href="/"
-                className="text-gray-300 hover:bg-white/30 px-3 py-2 rounded-full font-semibold"
+                className="text-gray-300 hover:bg-white/30 px-3 py-2 rounded-full font-semibold min-h-[44px] inline-flex items-center"
               >
                 Home
               </Link>
               <Link
                 href="/projects"
-                className="text-gray-300 hover:bg-white/30 px-3 py-2 rounded-full font-semibold"
+                className="text-gray-300 hover:bg-white/30 px-3 py-2 rounded-full font-semibold min-h-[44px] inline-flex items-center"
               >
                 Projects
               </Link>
               <Link
                 href="/portfolio"
-                className="text-gray-300 hover:bg-white/30 px-3 py-2 rounded-full font-semibold"
+                className="text-gray-300 hover:bg-white/30 px-3 py-2 rounded-full font-semibold min-h-[44px] inline-flex items-center"
               >
                 Portfolio
               </Link>
               <Link
                 href="/contact"
-                className="text-gray-300 hover:bg-white/30 px-3 py-2 rounded-full font-semibold"
+                className="text-gray-300 hover:bg-white/30 px-3 py-2 rounded-full font-semibold min-h-[44px] inline-flex items-center"
               >
                 Contact
               </Link>

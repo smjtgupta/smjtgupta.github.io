@@ -15,9 +15,9 @@ const ContactSection = () => {
             />
           </div>
           <div className="w-full md:w-3/4 lg:w-1/2">
-            <h2 className="font-serif text-3xl md:text-5xl text-center">
+            <h1 className="font-serif text-3xl md:text-5xl text-center">
               Get in Touch
-            </h2>
+            </h1>
             <form className="space-y-5 py-8">
               <div>
                 <label htmlFor="name" className="font-semibold text-white/80">
@@ -58,7 +58,8 @@ const ContactSection = () => {
               <a href="mailto:smjtgupta@gmail.com">
                 <button
                   type="submit"
-                  className="w-full mt-5 inline-flex items-center justify-center gap-2 border border-white bg-gray-100 text-gray-900 h-12 px-6 rounded-xl"
+                  className="w-full mt-5 inline-flex items-center justify-center gap-2 border border-white bg-gray-100 text-gray-900 h-12 px-6 rounded-xl min-h-[48px]"
+                  aria-label="Send email to Soumyajit Gupta"
                 >
                   <ArrowRight className="size-4" />
                   <span className="font-semibold">Send</span>
