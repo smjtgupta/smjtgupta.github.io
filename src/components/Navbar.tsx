@@ -14,6 +14,7 @@ const Navbar = () => {
             <Link
               href="/"
               className="text-xl font-bold flex items-center space-x-2"
+              aria-label="Soumo - Home"
             >
               <Image
                 src={SiteLogo}
