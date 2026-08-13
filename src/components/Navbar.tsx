@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import SiteLogo from "@/assets/images/soumo_logo.png";
+import SiteLogo from "@/assets/images/soumo_logo.webp";
 import ContactLogo from "@/assets/icons/email.svg";
 import { TechIcon } from "@/components/TechIcon";
 
@@ -20,6 +20,10 @@ const Navbar = () => {
                 src={SiteLogo}
                 alt="Website Logo"
                 className="hidden md:block h-12 w-auto"
+                width={386}
+                height={161}
+                sizes="120px"
+                priority
               />
               <span className="hidden lg:block text-lg text-semibold  text-gray-300">
                 Soumo

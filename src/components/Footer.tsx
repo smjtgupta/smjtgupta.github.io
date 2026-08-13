@@ -39,7 +39,7 @@ const Footer = () => {
                 aria-label={`${link.title} (opens in new tab)`}
               >
                 <span className="font-semibold">{link.title}</span>
-                <ArrowUpRightIcon className="size-4" />
+                <ArrowUpRightIcon className="size-4" aria-hidden="true" />
               </a>
             ))}
           </nav>

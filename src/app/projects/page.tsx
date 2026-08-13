@@ -2,6 +2,15 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 
+export const metadata = {
+  title: "Projects",
+  description:
+    "Explore Soumyajit Gupta's projects in neural networks, ML, NLP, computational sciences — covering fairness-aware toxicity detection, hyperspectral imaging, and interpretable deep learning models.",
+  alternates: {
+    canonical: "/projects",
+  },
+};
+
 interface Publication {
   label: string;
   title: string;
@@ -13,7 +22,7 @@ const publications: Publication[] = [
   {
     label: "[C10]",
     title: "Fairness-Aware Multi-Group Target Detection in Online Discussion",
-    pdfUrl: "",
+    pdfUrl: "https://dl.acm.org/doi/pdf/10.1145/3805689.3806441",
     authors: "Gupta, De-Arteaga, Lease. FAccT 2026.",
   },
   {
@@ -159,11 +168,14 @@ const groups: { type: string; filter: (p: Publication) => boolean }[] = [
 
 const IntroSection = () => {
   return (
-    <div className="flex flex-col items-center pt-40">
+    <section
+      className="flex flex-col items-center pt-40"
+      aria-label="Introduction"
+    >
       <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
-        Scalable Neural Models for Your Needs
+        Projects — Scalable Neural Models
       </h1>
-      <p className="mt-4 mx-2 text-white/60 md:text-lg text-center max-w-6xl">
+      <p className="mt-4 mx-2 text-white/70 md:text-lg text-center max-w-6xl">
         I specialize in building interpretable neural networks, demonstrating
         that with proper representation, a model can be both high-performing and
         transparent. My solutions are tailored for domain experts, using
@@ -178,7 +190,7 @@ const IntroSection = () => {
         &ldquo;one-size-fits-all&rdquo; model which most often overfits to
         majority groups and raises algorithmic fairness concerns.
       </p>
-    </div>
+    </section>
   );
 };
 
@@ -248,7 +260,7 @@ const projectFields: ProjectField[] = [
         ],
       },
       {
-        title: "Camera motion estimation for Cryo-EM images ",
+        title: "Camera motion estimation for Cryo-EM images",
         bullets: [
           "Simulated Cryo-EM images with simulated noise from Protein Database structures",
           "Built 3D virus capsid geometry from 2D image stacks using bundle assignment",
@@ -290,99 +302,113 @@ const projectFields: ProjectField[] = [
 
 const ProjectsSectionNew = () => {
   return (
-    <div className="py-20">
+    <section className="py-20" aria-label="Projects">
       <div className="container flex flex-col gap-16">
         {projectFields.map((field) => (
-          <div key={field.field}>
+          <article key={field.field}>
             <SectionHeader eyebrow="" title={field.field} description="" />
-            <div className="flex flex-col gap-6">
+            <ul
+              className="flex flex-col gap-6 mt-6"
+              aria-label={`Projects in ${field.field}`}
+            >
               {field.projects.map((project) => (
-                <Card key={project.title} className="px-6 py-6 md:px-8 md:py-8">
-                  <h3 className="font-serif text-lg md:text-xl mb-3">
-                    {project.title}
-                  </h3>
-                  <ul className="flex flex-col gap-2">
-                    {project.bullets.map((bullet, i) => (
-                      <li
-                        key={i}
-                        className="flex gap-2 text-sm md:text-base text-white/50"
-                      >
-                        <CheckCircleIcon className="size-4 md:size-5 mt-0.5 shrink-0" />
-                        <span>{bullet}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </Card>
+                <li key={project.title}>
+                  <Card className="px-6 py-6 md:px-8 md:py-8">
+                    <h3 className="font-serif text-lg md:text-xl mb-3">
+                      {project.title}
+                    </h3>
+                    <ul>
+                      {project.bullets.map((bullet, i) => (
+                        <li
+                          key={i}
+                          className="flex gap-2 text-sm md:text-base text-white/70"
+                        >
+                          <CheckCircleIcon
+                            className="size-4 md:size-5 mt-0.5 shrink-0"
+                            aria-hidden="true"
+                          />
+                          <span>{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </Card>
+                </li>
               ))}
-            </div>
-          </div>
+            </ul>
+          </article>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
 const Publications = () => {
   return (
-    <div className="pb-20">
+    <section className="pb-20" aria-label="Publications">
       <div className="container">
         <SectionHeader
           eyebrow="My Submitted Works"
           title="Published and Arxiv"
           description="Grouped by Type"
         />
-        <div className="mt-10 flex flex-col gap-8">
-          <Card>
-            <div className="flex flex-col p-4 md:py-4 md:px-6">
-              {groups.map((group) => {
-                const items = publications.filter(group.filter);
-                return (
-                  <div key={group.type}>
-                    <h3 className="text-center text-lg py-2 font-semibold">
-                      {group.type}
-                    </h3>
-                    {items.map((pub) => (
-                      <li
-                        key={pub.label}
-                        className="flex items-start gap-3 pb-4"
-                      >
-                        <span>{pub.label}</span>
-                        <p className="text-lg">
-                          <strong>
-                            {pub.title} [
-                            <a
-                              className="text-cyan-300 underline"
-                              href={pub.pdfUrl}
-                            >
-                              pdf
-                            </a>
-                            ]
-                          </strong>{" "}
-                          <span className="hidden md:block"> </span>
-                          {pub.authors}
-                        </p>
-                      </li>
-                    ))}
-                    {group.type !== "Arxiv" && (
-                      <hr className="border-t border-gray-300 my-4" />
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-          </Card>
-        </div>
+        <ul className="mt-10 flex flex-col gap-8">
+          <li>
+            <Card>
+              <div className="flex flex-col p-4 md:py-4 md:px-6">
+                {groups.map((group) => {
+                  const items = publications.filter(group.filter);
+                  return (
+                    <div key={group.type}>
+                      <h3 className="text-center text-lg py-2 font-semibold">
+                        {group.type}
+                      </h3>
+                      <ul aria-label={`${group.type} publications`}>
+                        {items.map((pub) => (
+                          <li
+                            key={pub.label}
+                            className="flex items-start gap-3 pb-4"
+                          >
+                            <span>{pub.label}</span>
+                            <p className="text-lg">
+                              <strong>
+                                {pub.title} [
+                                <a
+                                  className="text-cyan-300 underline"
+                                  href={pub.pdfUrl}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  pdf
+                                </a>
+                                ]
+                              </strong>{" "}
+                              <span className="hidden md:block"> </span>
+                              {pub.authors}
+                            </p>
+                          </li>
+                        ))}
+                      </ul>
+                      {group.type !== "Arxiv" && (
+                        <hr className="border-t border-gray-300 my-4" />
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </Card>
+          </li>
+        </ul>
       </div>
-    </div>
+    </section>
   );
 };
 
 export default function ProjectsPage() {
   return (
-    <div>
+    <>
       <IntroSection />
       <ProjectsSectionNew />
       <Publications />
-    </div>
+    </>
   );
 }
