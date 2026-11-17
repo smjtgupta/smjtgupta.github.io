@@ -193,12 +193,12 @@ const HeroSection = () => {
               <div className="bg-green-500 absolute inset-0 rounded-full animate-ping-large"></div>
             </div>
             <div className="text-sm font-medium">
-              Available for Full-time Work
+              Senior Data Scientist - QuantumBlack AI - McKinsey
             </div>
           </div>
           <div className="max-w-xl mx-auto">
             <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
-              Scalable AI Models for Your Needs
+              Scalable AI Models for Your Business Needs
             </h1>
             <p className="mt-4 text-center text-white/70 md:text-lg">
               I craft domain-guided AI models using advanced machine learning
@@ -245,10 +245,12 @@ const AboutSection = () => {
               <div className="flex-1 items-center justify-center">
                 <p className="md:pl-6 pb-4">
                   This is{" "}
-                  <span className="text-emerald-300 font-semibold">Soumo</span>,
-                  based in Mumbai, India. I&apos;m a domain-driven neural
-                  network modeler and applied AI scientist around natural
-                  language, imaging and computational sciences problems.
+                  <span className="text-emerald-300 font-semibold">
+                    Soumyajit (pron: Soumo-Jeet)
+                  </span>
+                  , based in Gurugram, India. I&apos;m a domain-driven Machine
+                  Learning &amp; Neural Nets modeler and applied AI scientist
+                  around natural language, imaging and computational sciences.
                 </p>
                 <p className="md:pl-6 pb-4">
                   I graduated with a PhD - Computer Science in 2025 from the{" "}
@@ -291,17 +293,25 @@ const AboutSection = () => {
                   >
                     Smart Dust Systems
                   </a>
-                  , Reno - NV, US, for around 1.5 years. I&apos;m open to{" "}
-                  <span className="text-emerald-300 font-semibold">
-                    Full-time In-person
-                  </span>{" "}
-                  roles on{" "}
-                  <span className="text-emerald-300 font-semibold">
-                    Applied Machine Learning and Agentic AI
-                  </span>{" "}
-                  around the Mumbai region.
+                  , Reno - NV, US, for around 1.5 years.
                 </p>
                 <p className="md:pl-6 pb-4">
+                  I&apos;m currently working as a{" "}
+                  <span className="text-emerald-300 font-semibold">
+                    Senior Data Scientist
+                  </span>{" "}
+                  at{" "}
+                  <a
+                    href="https://www.mckinsey.com/capabilities/quantumblack/how-we-help-clients"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-emerald-300 font-semibold underline"
+                  >
+                    QuantumBlack AI - McKinsey &amp; Company
+                  </a>
+                  , in Gurugram.
+                </p>
+                {/* <p className="md:pl-6 pb-4">
                   Here&apos;s a link to my{" "}
                   <Link
                     href="/Thesis_UT2025_Soumya.pdf"
@@ -311,7 +321,7 @@ const AboutSection = () => {
                     Thesis doc
                   </Link>
                   , till the Official one is out.
-                </p>
+                </p> */}
               </div>
               <div className="flex-1 flex items-center justify-center">
                 <figure className="size-60 rounded-full items-center overflow-hidden bg-cover bg-center">
@@ -428,7 +438,7 @@ const ProjectsSection = () => {
           <SectionHeader
             eyebrow="Real-World Results"
             title="Featured Projects"
-            description="Explore my journey of shaping ideas into practical and scalable outcomes"
+            description="My journey of shaping ideas into practical and scalable outcomes"
           />
           <Link
             href="/projects"
